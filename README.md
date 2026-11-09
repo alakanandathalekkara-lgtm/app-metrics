@@ -22,3 +22,8 @@ in a pre-provisioned Grafana dashboard.
 
 A `loadgen` container sends constant traffic. About 10% of `/work` calls fail on
 purpose, so the error-rate panel has data.
+
+> The `localhost` links work when you run the stack on your own machine.
+> On a remote server such as EC2, replace `localhost` with the server's public IP
+> and allow ports 3000 and 9090 in the security group (5000 is optional, since
+> Prometheus scrapes the app over the Docker network).
